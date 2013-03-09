@@ -15,5 +15,5 @@ In your strider directory:
 
 If you have a project that looks like Go, we run `go test`.
 
-
+![negative go-strider](https://github.com/Strider-CD/go-strider/raw/master/negative.jpg)
 
