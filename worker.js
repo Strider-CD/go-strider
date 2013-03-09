@@ -2,7 +2,7 @@
 module.exports = function(ctx, cb) {
 
   ctx.addDetectionRule({
-      filename: "*.go"
+      filename: "**.go"
     , exists: true
     , language: "go"
     , framework: "go"
