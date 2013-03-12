@@ -6,7 +6,7 @@ module.exports = function(ctx, cb) {
     , exists: true
     , language: "go"
     , framework: "go"
-    , prepare: "go get && go install"
+    , prepare: "go get && make || go install"
     , test: "go test"
   })
 
