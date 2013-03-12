@@ -1,6 +1,6 @@
 {
   "name": "go-strider",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "test go with strider",
   "main": "worker.js",
   "scripts": {
