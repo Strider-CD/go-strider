@@ -15,6 +15,13 @@
     "strider",
     "test"
   ],
+  "strider": {
+    "id": "go",
+    "title": "Go",
+    "type": "job",
+    "worker":"worker.js",
+    "icon": "icon.png"
+  },
   "author": "Peter Braden <peterbraden@peterbraden.co.uk>",
   "license": "BSD",
   "readmeFilename": "README.md"

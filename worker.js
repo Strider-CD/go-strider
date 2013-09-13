@@ -1,15 +1,15 @@
 // Setup Worker
-module.exports = function(ctx, cb) {
-
-  ctx.addDetectionRule({
+module.exports = {
+  init: function (config, job, context, done) {
+    done(null, {
+      prepare: 'go get && make || go install',
+      test: 'go test'
+    })
+  },
+  autodetect: {
       filename: "**.go"
     , exists: true
     , language: "go"
     , framework: "go"
-    , prepare: "go get && make || go install"
-    , test: "go test"
-  })
-
-  console.log("go-strider extension loaded")
-  cb(null, null);
+  }
 }
