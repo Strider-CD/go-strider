@@ -1,15 +1,15 @@
-// Setup Worker
-module.exports = function(ctx, cb) {
+var path = require('path')
+  , fs = require('fs')
 
-  ctx.addDetectionRule({
-      filename: "**.go"
-    , exists: true
-    , language: "go"
-    , framework: "go"
-    , prepare: "go get && make || go install"
-    , test: "go test"
-  })
-
-  console.log("go-strider extension loaded")
-  cb(null, null);
+module.exports = {
+  // Initialize the plugin for a job
+  //   config:     taken from DB config extended by flat file config
+  //   job & repo: see strider-runner-core
+  //   cb(err, initialized plugin)
+  init: function (config, job, context, cb) {
+    cb(null, {
+      prepare: 'go get && make || go install',
+      test: 'go test'
+    })
+  }
 }
